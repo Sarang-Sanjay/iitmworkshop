@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk Runner</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="ui-container">
+      <!-- Start Screen -->
+      <div id="start-screen" class="overlay">
+        <div class="panel">
+          <h1 class="title">CYBERPUNK RUNNER</h1>
+          <div class="button-container">
+            <button id="start-button" class="ui-button">START</button>
+            <button id="story-button" class="ui-button">STORY</button>
+            <button id="settings-button" class="ui-button">SETTINGS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Screen -->
+      <div id="settings-screen" class="overlay hidden">
+        <div class="panel">
+          <h2 class="title">SETTINGS</h2>
+          <!-- Settings content will go here -->
+          <button id="back-button" class="ui-button">BACK</button>
+        </div>
+      </div>
+
+      <!-- Story Log Screen -->
+      <div id="story-log-screen" class="overlay hidden">
+          <div class="panel">
+            <h2 class="title">STORY LOG</h2>
+            <div id="story-grid"></div>
+            <button id="back-to-menu-button" class="ui-button">BACK</button>
+          </div>
+      </div>
+
+      <!-- Story Viewer Screen -->
+       <div id="story-viewer-screen" class="overlay hidden">
+           <div class="panel">
+             <div id="story-content">
+                 <img id="story-image" src="" alt="Story Fragment Image" />
+                 <p id="story-text"></p>
+             </div>
+             <button id="back-to-log-button" class="ui-button">BACK</button>
+           </div>
+       </div>
+
+      <!-- Game Over Screen -->
+      <div id="game-over-screen" class="overlay hidden">
+        <div class="panel">
+          <h2 class="title">GAME OVER</h2>
+          <div id="final-score">FINAL SCORE: 0</div>
+          <div id="high-score">HIGH SCORE: 0</div>
+          <button id="play-again-button" class="ui-button">PLAY AGAIN</button>
+        </div>
+      </div>
+
+      <!-- In-Game HUD -->
+      <div id="hud" class="overlay hidden">
+        <div id="score">SCORE: 0</div>
+        <div id="shards">SHARDS: 0</div>
+        <button id="pause-button" class="ui-button small">||</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

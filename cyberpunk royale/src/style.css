@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Orbitron', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #00ffff;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#ui-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 15, 20, 0.8);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.panel {
+  background-image: url('/assets/ui/spritesheet.png');
+  background-position: -20px -20px; /* Example position */
+  background-size: 1000px; /* Adjust based on sprite sheet size */
+  border: 10px solid;
+  border-image-slice: 4;
+  border-image-source: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path d='M8 0 H16 V8 H24 V16 H16 V24 H8 V16 H0 V8 H8 Z' fill='%2300ffff' /></svg>");
+  padding: 2rem;
+  width: 80%;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ui-button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-image: url('/assets/ui/spritesheet.png');
+  background-position: -300px -200px; /* Example position */
+  background-size: 1000px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.ui-button:hover {
+  filter: brightness(1.2);
+}
+
+.ui-button.small {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#hud {
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: transparent;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#hud #score, #hud #shards {
+  font-size: 1.2rem;
+  text-align: left;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem;
+}
